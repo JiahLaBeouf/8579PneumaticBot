@@ -9,8 +9,10 @@ package org.usfirst.frc.team8579.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import org.usfirst.frc.team8579.robot.commands.CylinderIn;
-import org.usfirst.frc.team8579.robot.commands.CylinderOut;
+import org.usfirst.frc.team8579.robot.commands.Cylinder1In;
+import org.usfirst.frc.team8579.robot.commands.Cylinder1Out;
+import org.usfirst.frc.team8579.robot.commands.Cylinder2In;
+import org.usfirst.frc.team8579.robot.commands.Cylinder2Out;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -52,9 +54,13 @@ public class OI {
     public OI(){
         JoystickButton L1 = new JoystickButton(stick,5);
         JoystickButton R1 = new JoystickButton(stick,6);
+        JoystickButton L2 = new JoystickButton(stick,7);
+        JoystickButton R2 = new JoystickButton(stick, 8);
 
-        L1.whenPressed(new CylinderOut());
-        R1.whenPressed(new CylinderIn());
+        L1.whenPressed(new Cylinder1Out());
+        R1.whenPressed(new Cylinder1In());
+        L2.whenPressed(new Cylinder2Out());
+        R2.whenPressed(new Cylinder2In());
     }
 
     public Joystick getJoystick(){
