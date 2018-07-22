@@ -12,11 +12,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/Robot.java">
+      <file leaf-file-name="Drivetrain.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Drivetrain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+            <state relative-caret-position="6">
+              <caret line="242" column="94" selection-start-line="242" selection-start-column="94" selection-end-line="242" selection-end-column="94" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/OI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+            <state relative-caret-position="378">
+              <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -181,7 +184,6 @@
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/IntakeUp.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/IntakeDown.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/SpitIntake.java" />
-        <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Drivetrain.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/Robot.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ClimberArmUp.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ClimberArmDown.java" />
@@ -192,6 +194,7 @@
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Intake.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ShootCube.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/OI.java" />
+        <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Drivetrain.java" />
       </list>
     </option>
   </component>
@@ -379,6 +382,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="62" y="39" width="2425" height="1270" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="9" />
@@ -389,10 +393,10 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Run" order="5" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3293617" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3293617" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25178346" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25178346" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.3293617" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
@@ -616,16 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Drivetrain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$wpilib.sources$!/edu/wpi/first/wpilibj/SpeedControllerGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
@@ -765,8 +759,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/OI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+        <state relative-caret-position="378">
+          <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Drivetrain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="242" column="94" selection-start-line="242" selection-start-column="94" selection-end-line="242" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -7,13 +7,14 @@
 
 package org.usfirst.frc.team8579.robot.subsystems;
 
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.Spark;
-import edu.wpi.first.wpilibj.SpeedControllerGroup;
-import edu.wpi.first.wpilibj.VictorSP;
+import edu.wpi.cscore.UsbCamera;
+import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team8579.robot.commands.DriveWithJoystick;
+
+import java.util.logging.Logger;
 
 import static org.usfirst.frc.team8579.robot.RobotMap.*;
 
@@ -24,7 +25,10 @@ public class Drivetrain extends Subsystem {
 	// Put methods for controlling this subsystem
 	// here. Call these from Commands.
 
-	//Left side
+    private Logger logger = Logger.getLogger( this.getClass().getName());
+
+
+    //Left side
 	private VictorSP left0 = new VictorSP(leftF);
 	private VictorSP left1 = new VictorSP(leftB);
 	private SpeedControllerGroup leftSide = new SpeedControllerGroup(left0,left1);
@@ -36,8 +40,55 @@ public class Drivetrain extends Subsystem {
 
 	private DifferentialDrive robotDrive = new DifferentialDrive(leftSide,rightSide);
 
+
+    //gyro
+    private ADXRS450_Gyro gyro = null;
+
+    //encoder
+    private Encoder drivetrainEncoder = null;
+
+    private UsbCamera camera = null;  // it will remain null if we have no camera plugged into the USB ports
+
 	public Drivetrain(){
 		//in future init camera, init encoder, etc.
+
+        try {
+            camera = CameraServer.getInstance().startAutomaticCapture();
+        } catch (Exception e) {
+            logger.info("Camera not installed correctly" + e.toString());
+            SmartDashboard.putBoolean("Camera Installed", false);
+        }
+
+        try {
+            gyro = new ADXRS450_Gyro();
+            SmartDashboard.putBoolean("Gyro Installed", true);
+
+            //calibrates and resets the gyro to 0
+            gyro.reset(); // Reset the angle the gyro is pointing towards to 0
+            gyro.calibrate(); //Takes a long time, will have to test if necessary
+        }
+        catch (Exception e)
+        {
+            logger.info("Gyro not installed correctly" + e.toString());
+            SmartDashboard.putBoolean("Gyro Installed", false);
+        }
+
+        try{
+            drivetrainEncoder = new Encoder(0, 1, true, Encoder.EncodingType.k4X);
+            SmartDashboard.putBoolean("Drivetrain encoder installed", true);
+
+            drivetrainEncoder.setMaxPeriod(.1);
+            drivetrainEncoder.setMinRate(10);
+            drivetrainEncoder.setDistancePerPulse(0.2493639169);
+            drivetrainEncoder.setReverseDirection(true);
+            drivetrainEncoder.setSamplesToAverage(7);
+
+
+            drivetrainEncoder.reset();
+        } catch (Exception e){
+            System.out.println("Encoder not installed correctly" + e.toString());
+            SmartDashboard.putBoolean("Drivetrain encoder installed", false);
+        }
 	}
 
 
@@ -78,5 +129,157 @@ public class Drivetrain extends Subsystem {
 		//leftSide.set(-stick.getY());
 		//rightSide.set(stick.getRawAxis(5));
 	}
+
+
+
+	//THIS IS ALL FROM THE OLD ROBOT CODE
+
+    public void setPower(double leftPower, double rightPower){
+	    leftSide.set(-leftPower);
+	    rightSide.set(rightPower);
+    }
+
+    /**
+     * Gets the current gyro angle
+     */
+    public double getGyroAngle(){
+        //publishStats();
+        double gyroAngle = 0;
+
+        //error handling for if there is no gyro
+        if (gyro != null){
+            gyroAngle = gyro.getAngle();
+        }
+        return gyroAngle;
+    }
+
+    /**
+     * Gets the moderated gyro angle (makes values between -360 and 360)
+     * @return
+     */
+    public double getModGyroAngle(){
+        double gyroModAngle = getGyroAngle() % 360;
+        SmartDashboard.putNumber("getModGyroAngle", gyroModAngle);
+
+        return gyroModAngle;
+    }
+
+    /**
+     * resets the gyro
+     */
+    public void resetGyro(){
+        try {
+            gyro.reset();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Follows an angle off the gyro at a driver defined speed
+     * @param power
+     * @param gyroTarget
+     */
+    public void followGyro(double power, double gyroTarget)
+    {
+        // ToDo: fill in this method
+        //proportionally drives in the direction of a gyro heading, turning to face the right direction
+        double currentGyroAngle = getGyroAngle() % 360;
+        double gyroPowerAdjustment = 0;
+        double gyroGain = 0.05;
+
+
+        //Calculates how much to turn based on the current heading and the target heading
+        gyroPowerAdjustment = currentGyroAngle - (gyroTarget % 360);
+        gyroPowerAdjustment = gyroPowerAdjustment * gyroGain;
+
+        double gyroMotorPowerLeft = -power - gyroPowerAdjustment;
+        double gyroMotorPowerRight = power - gyroPowerAdjustment; //ToDo: Make adjustment to remove the - from in front when changing to setPower
+
+        //Makes the motors move
+        leftSide.set(gyroMotorPowerLeft);
+        rightSide.set(gyroMotorPowerRight);
+    }
+
+    /**
+     * This method makes the robot stop on the spot.
+     */
+    public void hardStop(){
+
+        // lets get the current gyro angle and encoder value.  We want to return to this spot
+        long encoderPosition = drivetrainEncoder.getRaw();
+        double gyroAtStop = gyro.getAngle();
+
+
+
+        logger.info("hardStop: initial (leftToughbox:right) = (" + leftSide.get() + ":" + rightSide.get() + ")");
+        double leftStopPower;
+        double rightStopPower;
+
+        if (leftSide.get()>0){
+            leftStopPower = -0.1;
+
+        }
+        else{
+            leftStopPower = 0.1;
+        }
+
+        if (leftSide.get() > 0){
+            rightStopPower = -0.1;
+        }
+        else{
+            rightStopPower = 0.1;
+        }
+//        leftStopPower = leftToughbox.get() * -1.5;
+//        rightStopPower = rightToughbox.get() * -1.5;
+
+        long beginTimneHardStop = System.currentTimeMillis();
+        while (System.currentTimeMillis()-beginTimneHardStop < 25) {
+
+            setPower(leftStopPower, rightStopPower);
+            logger.fine("hardStop:current (leftToughbox:right) = (" + leftSide.get() + ":" + rightSide.get() + ")");
+        }
+        setPower(0,0);
+        logger.info("hardStop:end (leftToughbox:right) = (" + leftSide.get() + ":" + rightSide.get() + ")");
+        logger.info("hardStop finished");
+
+    }
+
+    public void turn(double targetAngle, boolean left)
+    {
+        logger.info("turn [" + targetAngle + ":" + left + "]");
+        double turnPower = 0.3;
+        double slowTurnPower = 0.25;
+
+        SmartDashboard.putNumber("turn.targetAngle", targetAngle);
+        SmartDashboard.putBoolean("turn.left", left);
+
+        // reset gyro sensor to zero
+        gyro.reset();   // do not calibrate as this will stop the world and make the gyro crazy
+
+        long startTime = System.currentTimeMillis();
+        long timeTaken = 0;
+
+        while ( (Math.abs(getModGyroAngle()) < (Math.abs(targetAngle-10))) && (timeTaken < 5000) )
+        {
+            if (left)
+            {
+                setPower(turnPower, -turnPower);
+            }
+            else
+            {
+                // must want to turn right
+                setPower(-turnPower, turnPower);
+            }
+
+            timeTaken = System.currentTimeMillis() - startTime;
+        }
+
+        hardStop();
+
+        logger.info("Gyro turn finished");
+
+    }
+
 }
 
