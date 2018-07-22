@@ -3,10 +3,10 @@ package org.usfirst.frc.team8579.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc.team8579.robot.Robot;
 
-public class Cylinder2Out extends Command {
+public class ClimberArmDown extends Command {
 
-    public Cylinder2Out(){
-        requires(Robot.pneumatics);
+    public ClimberArmDown(){
+        requires(Robot.climber);
     }
     // Called just before this Command runs the first time
     @Override
@@ -17,7 +17,7 @@ public class Cylinder2Out extends Command {
     // Called repeatedly when this Command is scheduled to run
     @Override
     protected void execute() {
-        Robot.pneumatics.cylinder2Out();
+        Robot.climber.armDown();
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -29,7 +29,6 @@ public class Cylinder2Out extends Command {
     // Called once after isFinished returns true
     @Override
     protected void end() {
-        //Robot.intake.stopIntake();
     }
 
     // Called when another command which requires one or more of the same
@@ -37,4 +36,5 @@ public class Cylinder2Out extends Command {
     @Override
     protected void interrupted() {
     }
+
 }

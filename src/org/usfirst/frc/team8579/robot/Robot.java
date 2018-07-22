@@ -13,8 +13,9 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team8579.robot.commands.DriveWithJoystick;
+import org.usfirst.frc.team8579.robot.subsystems.Climber;
 import org.usfirst.frc.team8579.robot.subsystems.Drivetrain;
-import org.usfirst.frc.team8579.robot.subsystems.Pneumatics;
+import org.usfirst.frc.team8579.robot.subsystems.Intake;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -27,7 +28,8 @@ public class Robot extends TimedRobot {
 	public static final Drivetrain drivetrain
 			= new Drivetrain();
 	public static OI oi;
-	public static final Pneumatics pneumatics = new Pneumatics();
+	public static final Intake intake = new Intake();
+	public static final Climber climber = new Climber();
 
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();

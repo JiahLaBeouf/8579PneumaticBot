@@ -27,4 +27,40 @@ public class RobotMap {
 
 
     //Fill out when time allows
+    //ten motors total, one double solenoid
+
+    /**
+     * DRIVETRAIN SUBSYSTEM
+     * Left toughbox in 0,1
+     * Right toughbox in 8,9
+     */
+    public static int leftF = 0;
+    public static int leftB = 1;
+
+    public static int rightF = 8;
+    public static int rightB = 9;
+
+    /**
+     * INTAKE SUBSYSTEM
+     * PG arm motor in 5
+     * 775 pros in 6 & 7
+     */
+    public static int arm = 5;
+
+    public static int intakeLeft = 6;
+    public static int intakeRight = 7;
+
+    /**
+     * CLIMBER SUBSYSTEM
+     * toughbox in 2,3
+     * arm in 4
+     */
+    public static int climberArm = 4;
+
+    public static int climber1 = 2;
+    public static int climber2 = 3;
+
+
+
+
 }

@@ -9,10 +9,7 @@ package org.usfirst.frc.team8579.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import org.usfirst.frc.team8579.robot.commands.Cylinder1In;
-import org.usfirst.frc.team8579.robot.commands.Cylinder1Out;
-import org.usfirst.frc.team8579.robot.commands.Cylinder2In;
-import org.usfirst.frc.team8579.robot.commands.Cylinder2Out;
+import org.usfirst.frc.team8579.robot.commands.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -56,11 +53,27 @@ public class OI {
         JoystickButton R1 = new JoystickButton(stick,6);
         JoystickButton L2 = new JoystickButton(stick,7);
         JoystickButton R2 = new JoystickButton(stick, 8);
+        JoystickButton LeftStick = new JoystickButton(stick, 11);
+        JoystickButton RightStick = new JoystickButton(stick, 12);
 
-        L1.whenPressed(new Cylinder1Out());
-        R1.whenPressed(new Cylinder1In());
-        L2.whenPressed(new Cylinder2Out());
-        R2.whenPressed(new Cylinder2In());
+        JoystickButton Triangle = new JoystickButton(stick,4);
+        JoystickButton Square = new JoystickButton(stick, 1);
+        JoystickButton X = new JoystickButton(stick,2);
+
+        JoystickButton O = new JoystickButton(stick,3);
+
+        L1.whenPressed(new ClampIntake());
+        R1.whenPressed(new OpenIntake());
+        L2.whileHeld(new IntakeUp());
+        R2.whileHeld(new IntakeDown());
+        RightStick.whileHeld(new SpitIntake());
+        LeftStick.whileHeld(new SuckIntake());
+
+        Triangle.whileHeld(new ClimberArmUp());
+        Square.whileHeld(new ClimberArmDown());
+        X.whileHeld(new LiftBot());
+
+        O.whileHeld(new ShootCube());
     }
 
     public Joystick getJoystick(){
