@@ -182,7 +182,6 @@ public class Drivetrain extends Subsystem {
      */
     public void followGyro(double power, double gyroTarget)
     {
-        // ToDo: fill in this method
         //proportionally drives in the direction of a gyro heading, turning to face the right direction
         double currentGyroAngle = getGyroAngle() % 360;
         double gyroPowerAdjustment = 0;
@@ -194,7 +193,7 @@ public class Drivetrain extends Subsystem {
         gyroPowerAdjustment = gyroPowerAdjustment * gyroGain;
 
         double gyroMotorPowerLeft = -power - gyroPowerAdjustment;
-        double gyroMotorPowerRight = power - gyroPowerAdjustment; //ToDo: Make adjustment to remove the - from in front when changing to setPower
+        double gyroMotorPowerRight = power - gyroPowerAdjustment;
 
         //Makes the motors move
         leftSide.set(gyroMotorPowerLeft);

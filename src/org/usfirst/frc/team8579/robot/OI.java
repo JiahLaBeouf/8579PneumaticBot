@@ -62,6 +62,8 @@ public class OI {
 
         JoystickButton O = new JoystickButton(stick,3);
 
+        JoystickButton PSButton = new JoystickButton(stick,13);
+
         L1.whenPressed(new ClampIntake());
         R1.whenPressed(new OpenIntake());
         L2.whileHeld(new IntakeUp());
@@ -74,6 +76,7 @@ public class OI {
         X.whileHeld(new LiftBot());
 
         O.whileHeld(new ShootCube());
+
     }
 
     public Joystick getJoystick(){

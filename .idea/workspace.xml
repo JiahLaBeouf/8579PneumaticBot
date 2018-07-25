@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cefb0e8f-ec8e-4510-beb6-ad741ea76e9b" name="Default" comment="" />
+    <list default="true" id="cefb0e8f-ec8e-4510-beb6-ad741ea76e9b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/OI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/OI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/Robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Drivetrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Drivetrain.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +20,21 @@
       <file leaf-file-name="Drivetrain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Drivetrain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="242" column="94" selection-start-line="242" selection-start-column="94" selection-end-line="242" selection-end-column="94" />
+            <state relative-caret-position="561">
+              <caret line="126" column="8" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="8" />
               <folding>
+                <element signature="e#0#8534#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/Robot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="116" column="56" lean-forward="true" selection-start-line="116" selection-start-column="56" selection-end-line="116" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -27,18 +42,14 @@
       <file leaf-file-name="SuckIntake.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/SuckIntake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="391">
               <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#198#199#0" expanded="true" />
-                <element signature="e#236#237#0" expanded="true" />
                 <element signature="e#469#470#0" expanded="true" />
                 <element signature="e#506#507#0" expanded="true" />
-                <element signature="e#630#631#0" expanded="true" />
-                <element signature="e#658#659#0" expanded="true" />
                 <element signature="e#757#758#0" expanded="true" />
-                <element signature="e#798#799#0" expanded="true" />
+                <element signature="e#792#793#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,18 +58,10 @@
       <file leaf-file-name="Climber.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Climber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="493">
               <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#620#621#0" expanded="true" />
-                <element signature="e#655#656#0" expanded="true" />
-                <element signature="e#605#606#0" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
-                <element signature="e#673#674#0" expanded="true" />
-                <element signature="e#705#706#0" expanded="true" />
-                <element signature="e#876#877#0" expanded="true" />
-                <element signature="e#900#901#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,36 +74,6 @@
               <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-                <element signature="e#511#512#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClimberArmUp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ClimberArmUp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClimberArmDown.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ClimberArmDown.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-                <element signature="e#511#512#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,8 +82,8 @@
       <file leaf-file-name="OI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/OI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+            <state relative-caret-position="384">
+              <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,7 +94,7 @@
       <file leaf-file-name="LiftBot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/LiftBot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="561">
               <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -135,7 +108,7 @@
       <file leaf-file-name="Intake.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Intake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
+            <state relative-caret-position="901">
               <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -147,7 +120,7 @@
       <file leaf-file-name="StopClimber.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/StopClimber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="289">
               <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -184,7 +157,6 @@
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/IntakeUp.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/IntakeDown.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/SpitIntake.java" />
-        <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/Robot.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ClimberArmUp.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ClimberArmDown.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/LiftBot.java" />
@@ -193,24 +165,23 @@
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Climber.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Intake.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ShootCube.java" />
+        <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/Robot.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/OI.java" />
         <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Drivetrain.java" />
+        <option value="$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ToggleHalfPower.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="62" />
-    <option name="y" value="39" />
-    <option name="width" value="2425" />
-    <option name="height" value="1270" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="953" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,50 +198,12 @@
               <item name="Pneumatic8579" type="b2602c69:ProjectViewProjectNode" />
               <item name="8579PneumaticBot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pneumatic8579" type="b2602c69:ProjectViewProjectNode" />
-              <item name="8579PneumaticBot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="usfirst" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pneumatic8579" type="b2602c69:ProjectViewProjectNode" />
-              <item name="8579PneumaticBot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="usfirst" type="462c0819:PsiDirectoryNode" />
-              <item name="frc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pneumatic8579" type="b2602c69:ProjectViewProjectNode" />
-              <item name="8579PneumaticBot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="usfirst" type="462c0819:PsiDirectoryNode" />
-              <item name="frc" type="462c0819:PsiDirectoryNode" />
-              <item name="team8579" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pneumatic8579" type="b2602c69:ProjectViewProjectNode" />
-              <item name="8579PneumaticBot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="usfirst" type="462c0819:PsiDirectoryNode" />
-              <item name="frc" type="462c0819:PsiDirectoryNode" />
-              <item name="team8579" type="462c0819:PsiDirectoryNode" />
               <item name="robot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pneumatic8579" type="b2602c69:ProjectViewProjectNode" />
               <item name="8579PneumaticBot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="usfirst" type="462c0819:PsiDirectoryNode" />
-              <item name="frc" type="462c0819:PsiDirectoryNode" />
-              <item name="team8579" type="462c0819:PsiDirectoryNode" />
               <item name="robot" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -278,10 +211,6 @@
               <item name="Pneumatic8579" type="b2602c69:ProjectViewProjectNode" />
               <item name="8579PneumaticBot" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="usfirst" type="462c0819:PsiDirectoryNode" />
-              <item name="frc" type="462c0819:PsiDirectoryNode" />
-              <item name="team8579" type="462c0819:PsiDirectoryNode" />
               <item name="robot" type="462c0819:PsiDirectoryNode" />
               <item name="subsystems" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -289,6 +218,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -381,7 +312,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="39" width="2425" height="1270" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="953" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
@@ -393,11 +324,10 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Run" order="5" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.3293617" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32827103" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25178346" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.3293617" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25457877" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
@@ -409,12 +339,120 @@
       <window_info anchor="right" id="Commander" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.3293617" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Drivetrain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4114">
+          <caret line="242" column="94" selection-start-line="242" selection-start-column="94" selection-end-line="242" selection-end-column="94" />
+          <folding>
+            <element signature="e#0#8534#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/SuckIntake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Climber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ShootCube.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ClimberArmUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ClimberArmDown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/OI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/LiftBot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Intake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/StopClimber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -427,6 +465,7 @@
         <state relative-caret-position="495">
           <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding>
+            <element signature="e#0#8534#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -454,39 +493,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="39" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/Cylinder2In.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="48" selection-start-column="48" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/Cylinder2Out.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/Cylinder2In.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/Cylinder2Out.java" />
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ClampIntake.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="39" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -496,12 +511,6 @@
           <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
-            <element signature="e#1536#1537#0" expanded="true" />
-            <element signature="e#1559#1560#0" expanded="true" />
-            <element signature="e#1599#1600#0" expanded="true" />
-            <element signature="e#1628#1629#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -538,22 +547,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="39" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/Cylinder2In.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="48" selection-start-column="48" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/Cylinder2In.java" />
     <entry file="jar://$wpilib.sources$!/edu/wpi/first/wpilibj/command/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1647">
@@ -561,16 +558,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/Cylinder2Out.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/Cylinder2Out.java" />
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/RobotMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -582,11 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -594,9 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -604,9 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="39" column="1" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -614,9 +591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -638,48 +612,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="38" column="5" selection-start-line="7" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/Robot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ClimberArmUp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="561">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ClimberArmDown.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="561">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#511#512#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/LiftBot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="561">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -691,7 +649,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/StopClimber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="289">
           <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -701,43 +659,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/SuckIntake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="391">
           <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#198#199#0" expanded="true" />
-            <element signature="e#236#237#0" expanded="true" />
             <element signature="e#469#470#0" expanded="true" />
             <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
             <element signature="e#757#758#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Climber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state relative-caret-position="493">
           <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#620#621#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#705#706#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#900#901#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Intake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
+        <state relative-caret-position="901">
           <caret line="72" column="27" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -751,27 +697,40 @@
           <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#511#512#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="116" column="56" lean-forward="true" selection-start-line="116" selection-start-column="56" selection-end-line="116" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/OI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="64" column="42" lean-forward="true" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+        <state relative-caret-position="384">
+          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/commands/ToggleHalfPower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/usfirst/frc/team8579/robot/subsystems/Drivetrain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="242" column="94" selection-start-line="242" selection-start-column="94" selection-end-line="242" selection-end-column="94" />
+        <state relative-caret-position="561">
+          <caret line="126" column="8" selection-start-line="126" selection-start-column="8" selection-end-line="126" selection-end-column="8" />
           <folding>
+            <element signature="e#0#8534#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
