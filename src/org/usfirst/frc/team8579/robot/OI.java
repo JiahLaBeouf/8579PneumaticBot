@@ -62,7 +62,9 @@ public class OI {
 
         JoystickButton O = new JoystickButton(stick,3);
 
-        JoystickButton PSButton = new JoystickButton(stick,13);
+        JoystickButton Touchpad = new JoystickButton(stick,14);
+
+        JoystickButton Options = new JoystickButton(stick, 10);
 
         L1.whenPressed(new ClampIntake());
         R1.whenPressed(new OpenIntake());
@@ -76,6 +78,10 @@ public class OI {
         X.whileHeld(new LiftBot());
 
         O.whileHeld(new ShootCube());
+
+        Touchpad.toggleWhenPressed(new SlowIntake());
+
+        Options.whileHeld(new ReleaseClimber());
 
     }
 

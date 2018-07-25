@@ -43,4 +43,8 @@ public class Climber extends Subsystem {
 
     public void stopClimb(){climberTB.stopMotor();}
 
+    public void dropDown(){
+        climberTB.set(-0.5);
+    }
+
 }

@@ -80,7 +80,7 @@ public class Intake extends Subsystem {
 
     public void stop(){
         armMotor.set(0);
-        slowSpin();
+        stopSpin();
     }
 
 //    public void cylinder2Out(){
