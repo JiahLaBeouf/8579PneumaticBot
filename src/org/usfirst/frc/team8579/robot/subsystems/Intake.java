@@ -51,9 +51,9 @@ public class Intake extends Subsystem {
         rightintake.set(-0.4);
     }
 
-    public void spitOut(){
-        leftIntake.set(-0.6);
-        rightintake.set(0.6);
+    public void spitOut(double power){
+        leftIntake.set(-power);
+        rightintake.set(power);
     }
 
     public void stopSpin(){

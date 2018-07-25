@@ -10,7 +10,6 @@ public class PerformRightMiddle extends Command{
 
     public PerformRightMiddle(){
         requires(intake);
-
         requires(drivetrain);
     }
 
@@ -24,16 +23,22 @@ public class PerformRightMiddle extends Command{
     protected void execute() {
 
         intake.clamp();
-        drivetrain.driveStraightUsingEncoderGyro(200,0.7);
+        drivetrain.driveStraightUsingEncoderGyro(170,0.7);
         drivetrain.hardStop();
 
+        long timer = System.currentTimeMillis();
+        while (System.currentTimeMillis()-timer < 1000) {//was 1300
+
+            drivetrain.setPower(0.3,0.3);
+        }
+
         long timer1 = System.currentTimeMillis();
-        while (System.currentTimeMillis()-timer1 < 1000) {//was 1300
+        while (System.currentTimeMillis()-timer1 < 100) {//was 1300
 
             intake.intakeDown();
         }
         intake.stop();
-        intake.spitOut();
+        intake.spitOut(0.4);
     }
 
     // Make this return true when this Command no longer needs to run execute()

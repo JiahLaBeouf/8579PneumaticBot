@@ -193,8 +193,8 @@ public class Drivetrain extends Subsystem {
         gyroPowerAdjustment = currentGyroAngle - (gyroTarget % 360);
         gyroPowerAdjustment = gyroPowerAdjustment * gyroGain;
 
-        double gyroMotorPowerLeft = -power - gyroPowerAdjustment;
-        double gyroMotorPowerRight = power - gyroPowerAdjustment;
+        double gyroMotorPowerLeft = power - gyroPowerAdjustment;
+        double gyroMotorPowerRight = -power - gyroPowerAdjustment;
 
         //Makes the motors move
         leftSide.set(gyroMotorPowerLeft);
@@ -248,7 +248,7 @@ public class Drivetrain extends Subsystem {
     public void turn(double targetAngle, boolean left)
     {
         logger.info("turn [" + targetAngle + ":" + left + "]");
-        double turnPower = 0.3;
+        double turnPower = 0.34;
         double slowTurnPower = 0.25;
 
         SmartDashboard.putNumber("turn.targetAngle", targetAngle);
@@ -264,12 +264,12 @@ public class Drivetrain extends Subsystem {
         {
             if (left)
             {
-                setPower(turnPower, -turnPower);
+                setPower(-turnPower, turnPower);
             }
             else
             {
                 // must want to turn right
-                setPower(-turnPower, turnPower);
+                setPower(turnPower, -turnPower);
             }
 
             timeTaken = System.currentTimeMillis() - startTime;
@@ -322,5 +322,7 @@ public class Drivetrain extends Subsystem {
         SmartDashboard.putNumber("gyro value",getModGyroAngle());
         SmartDashboard.putNumber("encoder pulses",drivetrainEncoder.getRaw());
     }
+
+
 }
 
