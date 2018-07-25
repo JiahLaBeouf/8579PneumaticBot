@@ -47,8 +47,8 @@ public class Intake extends Subsystem {
     }
 
     public void suckIn(){
-        leftIntake.set(0.3);
-        rightintake.set(-0.3);
+        leftIntake.set(0.4);
+        rightintake.set(-0.4);
     }
 
     public void spitOut(){
@@ -61,11 +61,16 @@ public class Intake extends Subsystem {
         rightintake.set(0);
     }
 
+    public void slowSpin(){
+        leftIntake.set(0.25);
+        rightintake.set(-0.25);
+    }
+
     public void intakeUp(){
-        armMotor.set(-0.7);
+        armMotor.set(-0.8);
     }
     public void intakeDown(){
-        armMotor.set(0.7);
+        armMotor.set(0.8);
     }
 
     public void shootCubez(){
@@ -75,7 +80,7 @@ public class Intake extends Subsystem {
 
     public void stop(){
         armMotor.set(0);
-        stopSpin();
+        slowSpin();
     }
 
 //    public void cylinder2Out(){

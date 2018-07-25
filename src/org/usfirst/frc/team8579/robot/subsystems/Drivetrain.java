@@ -27,6 +27,7 @@ public class Drivetrain extends Subsystem {
 
     private Logger logger = Logger.getLogger( this.getClass().getName());
 
+    private double distancePerPulse = 0.2493639169;
 
     //Left side
 	private VictorSP left0 = new VictorSP(leftF);
@@ -135,8 +136,8 @@ public class Drivetrain extends Subsystem {
 	//THIS IS ALL FROM THE OLD ROBOT CODE
 
     public void setPower(double leftPower, double rightPower){
-	    leftSide.set(-leftPower);
-	    rightSide.set(rightPower);
+	    leftSide.set(leftPower);
+	    rightSide.set(-rightPower);
     }
 
     /**
@@ -280,5 +281,46 @@ public class Drivetrain extends Subsystem {
 
     }
 
+    /**
+     * Drive the robot straight following the gyro for the given distance (based on the drive
+     * train encoder reading).
+     *
+     * @param distance
+     * @param power
+     */
+    public void driveStraightUsingEncoderGyro(double distance, double power){
+        logger.info("driveStraight [distance:power][" + distance + ":" + power + "]");
+        double gyroTarget = getGyroAngle();
+
+        double targetPulses;
+        targetPulses = (distance / distancePerPulse);
+
+        // reset encoder so we can measure till we get to the target distance
+        resetEncoder();
+
+        SmartDashboard.putNumber("Target Pulses", targetPulses);
+        double slowDownTarget = targetPulses*0.01;
+        //double buffer = 0.1*targetPulses;
+
+        long startTime = System.currentTimeMillis();
+        long timeTaken = 0;
+
+        while ((Math.abs(drivetrainEncoder.getRaw())<(targetPulses-slowDownTarget)) && (timeTaken < 5000) ){
+            followGyro(power, gyroTarget);
+            //setPower(power,power);
+            SmartDashboard.putNumber("Encoder distance", drivetrainEncoder.getDistance());
+
+            timeTaken = System.currentTimeMillis() - startTime;
+        }
+    }
+
+    public void resetEncoder(){
+        drivetrainEncoder.reset();
+    }
+
+    public void publishDrivetrainToSD(){
+        SmartDashboard.putNumber("gyro value",getModGyroAngle());
+        SmartDashboard.putNumber("encoder pulses",drivetrainEncoder.getRaw());
+    }
 }
 

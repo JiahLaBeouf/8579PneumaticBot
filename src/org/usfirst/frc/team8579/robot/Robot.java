@@ -7,12 +7,15 @@
 
 package org.usfirst.frc.team8579.robot;
 
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team8579.robot.commands.DriveWithJoystick;
+import org.usfirst.frc.team8579.robot.commands.MiddleAutoCommands;
+import org.usfirst.frc.team8579.robot.commands.RightAutoCommands;
 import org.usfirst.frc.team8579.robot.subsystems.Climber;
 import org.usfirst.frc.team8579.robot.subsystems.Drivetrain;
 import org.usfirst.frc.team8579.robot.subsystems.Intake;
@@ -31,6 +34,7 @@ public class Robot extends TimedRobot {
 	public static final Intake intake = new Intake();
 	public static final Climber climber = new Climber();
 
+
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
 
@@ -41,7 +45,8 @@ public class Robot extends TimedRobot {
 	@Override
 	public void robotInit() {
 		oi = new OI();
-		chooser.addDefault("Default Auto", new DriveWithJoystick());
+		chooser.addDefault("Default Auto", new MiddleAutoCommands());
+		chooser.addObject("Other auto", new RightAutoCommands());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 	}
@@ -115,6 +120,7 @@ public class Robot extends TimedRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		SmartDashboard.putData(Scheduler.getInstance());
+		drivetrain.publishDrivetrainToSD();
 	}
 
 	/**
@@ -123,4 +129,5 @@ public class Robot extends TimedRobot {
 	@Override
 	public void testPeriodic() {
 	}
+
 }
