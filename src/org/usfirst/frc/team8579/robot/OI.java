@@ -79,7 +79,7 @@ public class OI {
 
         O.whileHeld(new ShootCube());
 
-        Touchpad.toggleWhenPressed(new SlowIntake());
+        Touchpad.whenPressed(new SlowIntake());
 
         Options.whileHeld(new ReleaseClimber());
 

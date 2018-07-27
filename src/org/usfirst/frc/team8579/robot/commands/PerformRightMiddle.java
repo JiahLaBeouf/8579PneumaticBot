@@ -1,6 +1,7 @@
 package org.usfirst.frc.team8579.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team8579.robot.Robot;
 
 import static org.usfirst.frc.team8579.robot.Robot.drivetrain;
@@ -22,6 +23,9 @@ public class PerformRightMiddle extends Command{
     @Override
     protected void execute() {
 
+
+        boolean commandFinished;
+
         intake.clamp();
         drivetrain.driveStraightUsingEncoderGyro(170,0.7);
         drivetrain.hardStop();
@@ -33,18 +37,26 @@ public class PerformRightMiddle extends Command{
         }
 
         long timer1 = System.currentTimeMillis();
-        while (System.currentTimeMillis()-timer1 < 100) {//was 1300
+
+        while (System.currentTimeMillis()-timer1 < 200) {//was 1300
 
             intake.intakeDown();
         }
         intake.stop();
-        intake.spitOut(0.4);
+        long spitTimer = System.currentTimeMillis();
+        while (System.currentTimeMillis()-spitTimer < 2000) {//was 1300
+
+            intake.spitOut(0.6);
+        }
+
+        commandFinished = true;
+        SmartDashboard.putBoolean("command finished",commandFinished);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
-        return false;
+        return true;
     }
 
     // Called once after isFinished returns true
